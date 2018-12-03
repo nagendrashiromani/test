@@ -9,7 +9,7 @@ pipeline {
             
           },
           "Parallel First": {
-            sh 'echo "parallel first"'
+            sh 'echo "parallel first step"'
             
           }
         )
