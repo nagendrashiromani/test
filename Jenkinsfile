@@ -2,8 +2,9 @@ pipeline {
   agent any
   stages {
 	stage('checkout'){
-		checkout scm
 		steps{
+			checkout scm
+			//git url: 'https://github.com/nagendrashiromani/test.git', credentialsId: 'c703ef9e-f396-4c67-84d4-80fd8ac1272c'
 			script{
 				if (lastCommitIsVersionCommit()) {
 					currentBuild.result = 'ABORTED'
